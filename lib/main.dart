@@ -20,8 +20,20 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text("New App"),
       ),
-      body: Center(
-        child: Text("New PE App"),
+      body: Column(
+        children: <Widget>[
+          Container(
+            width: double.infinity,
+            child: Card(
+              child: Text("Cart"),
+              color: Colors.blueAccent,
+              elevation: 5,
+            ),
+          ),
+          Card(
+            child: Text("List"),
+          ),
+        ],
       ),
     );
   }
