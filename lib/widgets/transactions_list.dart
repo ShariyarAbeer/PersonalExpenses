@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 class TransactionList extends StatelessWidget {
-  List _userTransactions;
+  final List _userTransactions;
 
   TransactionList(this._userTransactions);
 
