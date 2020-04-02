@@ -16,6 +16,10 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.green,
+        accentColor: Colors.lightGreen,
+      ),
       home: MyHomePage(),
     );
   }
@@ -94,6 +98,14 @@ class _MyHomePageState extends State<MyHomePage> {
             TransactionList(_userTransactions),
           ],
         ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton: FloatingActionButton(
+        child: Icon(
+          Icons.add,
+          color: Colors.white,
+        ),
+        onPressed: () => _startAddNewTransactions(context),
       ),
     );
   }
